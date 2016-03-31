@@ -1,0 +1,39 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .popup-div {
+  background: white none repeat scroll 0 0;
+  height: 300px;
+  left: 352px;
+  overflow: scroll;
+  position: absolute;
+  z-index: 2147483647;
+  width: 550px;
+}
+
+.cross_button {
+  float: right;
+}
+
+.ocr-table td
+{
+	padding: 6px;
+}
+.popup-div {
+  background: white none repeat scroll 0 0;
+  height: 300px;
+  left: 352px;
+  overflow: scroll;
+  position: fixed;
+  top: 152px;
+  width: 550px;
+  z-index: 2147483647;
+-webkit-box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+-moz-box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+}
+.popup-div > div {
+  padding: 5px;
+}

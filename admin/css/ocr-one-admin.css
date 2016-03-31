@@ -1,0 +1,81 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .popup-div {
+  background: white none repeat scroll 0 0;
+  height: 300px;
+  left: 352px;
+  overflow: scroll;
+  position: absolute;
+  z-index: 2147483647;
+  width: 550px;
+}
+
+.cross_button {
+  float: right;
+}
+
+.ocr-table td
+{
+	padding: 6px;
+}
+
+.popup-div {
+  background: white none repeat scroll 0 0;
+  height: 300px;
+  left: 352px;
+  overflow: scroll;
+  position: absolute;
+  top: 173px;
+  width: 550px;
+  z-index: 2147483647;
+-webkit-box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+-moz-box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+box-shadow: 2px 10px 22px 1px rgba(0,0,0,0.61);
+}
+
+.popup-div {
+  background: lightgrey none repeat scroll 0 0 !important;
+  border: 2px solid grey;
+  padding: 18px;
+}
+.cross_button button {
+  background: grey;
+  color: blue;
+}
+input {
+  background: lightblue;
+}
+.admin_main_fieldset {
+  border: 2px solid!important;
+  padding: 34px;
+  width: 53%!important;
+float:left;
+}
+.api_extend {
+  width: 79%!important;
+}
+.admin_sub_fieldset {
+  border: 2px solid !important;
+  padding-bottom: 18px;
+  padding-left: 6px;
+}
+.admin_help_fieldset {
+  border: 2px solid;
+  float: right;
+  width: 21%;
+  padding-bottom: 10px;
+margin-right: 189px;
+}
+.admin_help_inner_fieldset {
+  border: 2px solid;
+  height: 219px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+}
+.actions_is {
+  width: 123px;
+}
