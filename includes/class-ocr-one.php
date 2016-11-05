@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       http://shubhcomputing.com
- * @since      1.0.0
+ * @since      1.0.2
  *
  * @package    Ocr_One
  * @subpackage Ocr_One/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      1.0.0
+ * @since      1.0.2
  * @package    Ocr_One
  * @subpackage Ocr_One/includes
  * @author     shubhcomputing <support@shubhcomputing.com>
@@ -33,7 +33,7 @@ class Ocr_One {
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   protected
 	 * @var      Ocr_One_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
@@ -42,7 +42,7 @@ class Ocr_One {
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   protected
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
@@ -51,7 +51,7 @@ class Ocr_One {
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   protected
 	 * @var      string    $version    The current version of the plugin.
 	 */
@@ -64,12 +64,12 @@ class Ocr_One {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 */
 	public function __construct() {
 
 		$this->plugin_name = 'ocr-one';
-		$this->version = '1.0.0';
+		$this->version = '1.0.2';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -91,7 +91,7 @@ class Ocr_One {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   private
 	 */
 	private function load_dependencies() {
@@ -129,7 +129,7 @@ class Ocr_One {
 	 * Uses the Ocr_One_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   private
 	 */
 	private function set_locale() {
@@ -144,7 +144,7 @@ class Ocr_One {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
@@ -160,7 +160,7 @@ class Ocr_One {
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 * @access   private
 	 */
 	private function define_public_hooks() {
@@ -175,7 +175,7 @@ class Ocr_One {
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    1.0.2
 	 */
 	public function run() {
 		$this->loader->run();
@@ -185,7 +185,7 @@ class Ocr_One {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
+	 * @since     1.0.2
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
@@ -195,7 +195,7 @@ class Ocr_One {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     1.0.2
 	 * @return    Ocr_One_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
@@ -205,7 +205,7 @@ class Ocr_One {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     1.0.2
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {
@@ -240,7 +240,7 @@ class Ocr_One {
 			echo "API Key: <input type='text' class='api_extend' name='incuro_subscription_key' value='".get_option('incuro_subscription_key')."'>";
 			echo "<input type='submit' value='Update' name='isk_submit'>";
 			echo "</form>";
-			$url = "http://docunate.azure-api.net/Info/GetOCRLanguageCodeList";
+			$url = "http://ics01.cloudapp.net:9003/GetOCRLanguageCodeList";
 		 	$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL,$url);
 			curl_setopt($ch, CURLOPT_POST, 0);
@@ -328,7 +328,7 @@ class Ocr_One {
 			echo "</fieldset>";
 			echo "<fieldset class='admin_help_fieldset'><legend>Help</legend>";
 			echo "<fieldset class='admin_help_inner_fieldset'>";
-			echo "How to Get API? </br> Go to <a href='https://docunate.portal.azure-api.net/docs/services' target='_blank'>Docunate</a>, 
+			echo "How to Get API? </br> Go to <a href='http://ics01.cloudapp.net:9003/' target='_blank'>Docunate</a>, 
 			Register there and</br> Get  API Key";
 
 			echo "</fieldset>";
@@ -352,7 +352,7 @@ class Ocr_One {
 						    $file_name =$_FILES['ocr_file']['tmp_name'];
 						    $file_ext = strtolower( end(explode('.',$file_or_name)));
 			
-							echo $file_ext;
+							//echo $file_ext;
 						    $file_size=$_FILES['ocr_file']['size'];
 						    $file_tmp= $_FILES['ocr_file']['tmp_name'];
 						    //echo $file_tmp;echo "<br>";
@@ -362,20 +362,21 @@ class Ocr_One {
 						    $base64 = base64_encode($data);
 						   
 						    //echo "Base64 is ".$base64;
-						    $url = "http://docunate.azure-api.net/Operation/GetOCRData";
+						    $url = "http://ics01.cloudapp.net:9003/GetOCRData";
 						    $pfields =array('Name'=>$file_or_name,
 						    	'FileType'=>'application/'.$file_ext,
-						    	'FileName'=>'$file_or_name',
+						    	'FileName'=>$file_or_name,
 						    	'FileContent'=>$base64,
 						    	'LanCode'=> $_POST['ocr-lang']
 			
 						    	);
+						    
 						 	$ch = curl_init();
 							curl_setopt($ch, CURLOPT_URL,$url);
 							curl_setopt($ch, CURLOPT_POST, 1);
 							curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($pfields));  //Post Fields
 							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			
+								
 							// $headers = array();
 							// (object)$headers['Ocp-Apim-Subscription-Key'] = 'edb86e8b2d064b0ba612872231e8abcd';
 							// (object)$headers['Content-Type'] = 'application/json';
@@ -388,6 +389,7 @@ class Ocr_One {
 							$server_output = curl_exec ($ch);
 							
 							$v = json_decode($server_output); 
+							
 							
 							if(isset($_POST['persist']) && $_POST['persist']!="")
 							{
@@ -492,7 +494,7 @@ class Ocr_One {
 		function ocrone_shortcode() {
 			if(is_user_logged_in())
 			{
-			$url = "http://docunate.azure-api.net/Info/GetOCRLanguageCodeList";
+			$url = "http://ics01.cloudapp.net:9003/GetOCRLanguageCodeList";
 		 	$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL,$url);
 			curl_setopt($ch, CURLOPT_POST, 0);
@@ -501,6 +503,7 @@ class Ocr_One {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			$server_output = curl_exec ($ch);			
 			$v = json_decode($server_output); 
+			
 			/*echo "<h1> OCR ONE </h1>";*/
 			echo "<fieldset class='public_main_fieldset'><legend> OCR Operation</legend>";	
 			echo "<div class='ocr_one_wrapper'>";
