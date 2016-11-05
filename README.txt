@@ -1,52 +1,51 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://shubhcomputing.com
-Tags: comments, spam
+=== OCR One ===
+Contributors: shubhcomputing
+Donate link: 
+Tags: ocr, optical chracter recognition, get image text, shubhcomputing
 Requires at least: 3.0.1
+Author: shubhcomputing
 Tested up to: 4.6.1
-Stable tag: 4.3
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+OCR one is wordpress plugin for Docunate OCR. Initial support is for all major Indic languages including English, Arabic, Russian.
 
 == Description ==
 
-Ocr-one provides an interface where user can upload images and get text from it.
+OCR one is wordpress plugin for Docunate OCR. Initial support is for all major Indic languages including English, Arabic, Russian. 
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
 
-A few notes about the sections above:
+= Features =
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+* Allows your user to get text from images (please see language supports)
+* 90% accuracy to read text from images
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+= Links =
+
+* [Plugin's web page](http://www.shubhcomputing.com)
+* [FAQ](https://wordpress.org/plugins/user-redirects/faq/)
+* [Support forum](https://wordpress.org/support/plugin/ocr-one)
+
+= Get involved =
+
+* Developers can contribute to the source code on our [GitHub repository](https://github.com/shubh-admin/ocr-one).
+* Users can contribute by leaving a 5 stars [review](https://wordpress.org/support/view/plugin-reviews/ocr-one).
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+1. Upload OCR-One to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Use the OCR-One screen to configure the plugin.
 
-e.g.
+== Screenshots ==
 
-1. Upload `ocr-one.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Use the Ocr-one screen to configure the plugin.
-1. Place `<?php do_action('ocr-one'); ?>` in your templates
+1. Admin dashboard of OCR-One.
+2. User section of OCR-One.
+
 
 == Frequently Asked Questions ==
 
@@ -54,19 +53,35 @@ e.g.
 
 An answer to that question.
 
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screenshots description corresponds to assets/scr1.png.This screenshots shows the admin screen of the plugin.
-1. This screenshots description corresponds to assets/scr2.png.This screenshots shows the frontend screen of the plugin.
-
 == Changelog ==
 
-= 1.0 =
-* Initial release.
+= 1.0.3 =
+* Tested for WordPress version 4.5
+= 1.0.2 =
+* Notes updated
+= 1.0.1 =
+* Screen shot updated
+= 0.1 =
+* Initial Release
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Better installation steps
+
+= 1.0.3 =
+* Update required for latest WordPress (ver-4.5)
+
+= 1.0.4 =
+* Update required for latest WordPress (ver-4.6.1)
+* Changes as per new Docunate API Url
 
 
+== Arbitrary section ==
 
+This is plugin is depends upon the Docunate-OCR API.
+
+
+== More Information ==
+<a href="http://www.shubhcomputing">Visit plugin site</a> | <a href="https://wordpress.org/plugins/user-redirects/faq/">FAQ</a> | 
+<a href="https://wordpress.org/support/plugin/user-redirects">Support</a> | <a href="http://twitter.com/shubhcomputing">Follow on Twitter</a> | <a href="http://www.facebook.com/shubhcomputing">Like us on Facebook</a>
